@@ -1,4 +1,2 @@
-# NaifiProject
+#NaifiPrjkt
 
-# ABOUT ME 
-[Naifi](naifiproject.my.id)
