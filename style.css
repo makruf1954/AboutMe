@@ -14,15 +14,15 @@ body {
 
 /* Navbar */
 header {
-    background: rgba(15, 15, 23, 0.9);
+    background: rgba(15, 15, 23, 0.85);
     color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 header .container {
     width: 90%;
@@ -81,7 +81,7 @@ nav a:hover {
 .btn {
     background: #4da6ff;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     margin-top: 20px;
     display: inline-block;
     border-radius: 25px;
@@ -100,7 +100,7 @@ section {
 }
 section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 2rem;
     color: #4da6ff;
 }
@@ -109,6 +109,49 @@ section p {
     max-width: 700px;
     margin: auto;
     color: #ccc;
+}
+
+/* Projects */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    background: #1d1d26;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+.project-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.project-card a {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.project-card a:hover {
+    background: #3b8c3e;
+}
+.project-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 /* Contact */
@@ -125,7 +168,7 @@ section p {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: background 0.3s;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
 .contact-links a:hover {
@@ -141,24 +184,17 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animations */
+/* Fade-in Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+    animation: fadeUp 0.8s ease forwards;
 }
-
-/* animations*/
-#projects .project-card {
-  transition: transform 0.3s ease-in-out;
-}
-
-#projects .project-card:hover {
-  transform: scale(1.05);
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 /* Responsive */
@@ -170,17 +206,4 @@ footer {
     .hero h2 {
         font-size: 1.5rem;
     }
-        }
-
-/* Awal posisi sebelum muncul */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Saat muncul di layar */
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
 }
