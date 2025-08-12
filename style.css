@@ -93,7 +93,16 @@ nav a:hover {
 .btn:hover {
     background: #357fd9;
 }
-
+#typing-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+#typing-subtext {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-top: 10px;
+}
 /* Sections */
 section {
     padding: 80px 20px;
