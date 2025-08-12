@@ -152,6 +152,15 @@ footer {
     transform: translateY(0);
 }
 
+/* animations*/
+#projects .project-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+#projects .project-card:hover {
+  transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav a {
